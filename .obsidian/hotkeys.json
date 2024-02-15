@@ -1,0 +1,19 @@
+{
+  "editor:delete-paragraph": [],
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ],
+  "homepage:open-homepage": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "H"
+    }
+  ]
+}
