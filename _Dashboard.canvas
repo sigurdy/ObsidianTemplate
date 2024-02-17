@@ -1,19 +1,16 @@
 {
 	"nodes":[
-		{"id":"ef6a4f7af80c01af","type":"group","x":-4060,"y":-2340,"width":3740,"height":1380,"label":"Dashboard"},
+		{"id":"ef6a4f7af80c01af","type":"group","x":-4060,"y":-2340,"width":2600,"height":1380,"label":"Dashboard"},
 		{"id":"72ca3d3bf1c08c02","type":"group","x":-4000,"y":-2240,"width":1240,"height":569,"color":"4","label":"✅ Task Overview"},
 		{"id":"0ae36686ec2569cd","type":"group","x":-4000,"y":-1609,"width":1240,"height":569,"color":"5","label":"📝 Notes"},
 		{"id":"2fca0f93b64cfa1b","type":"group","x":-2720,"y":-1609,"width":1200,"height":569,"color":"1","label":"🛡️ Governance"},
 		{"id":"918da860cc4fb363","type":"group","x":-2720,"y":-2240,"width":1200,"height":569,"color":"#2b00ff","label":"📚 Projects"},
-		{"id":"4c425663a37fd9e7","type":"group","x":-1440,"y":-2240,"width":1060,"height":569,"label":"📋 Resources"},
 		{"id":"d1ee8a88519c28f5","type":"text","text":"> [!danger] 🗳️ Uncategorised Notes\n> ```dataview\n> TABLE file.mtime AS Modified, file.cday AS DateCreated, aliases AS Alias\n> FROM \"100. QuickNotes\"\n> WHERE file.name != this.file.name \n> SORT file.mtime DESC\n> LIMIT 10\n> ```","x":-2700,"y":-1589,"width":560,"height":529},
 		{"id":"cc93815ff56cae07","type":"text","text":"\n> [!info] ⏳ Recent Modified Notes - Limit of 30 notes\n> ```dataview\n> TABLE file.mtime AS Modified\n> FROM \"\" AND !\"900. Resources\"\n> WHERE file.name != this.file.name \n> SORT file.mtime DESC\n> LIMIT 30\n> ```\n","x":-3980,"y":-1586,"width":565,"height":526},
-		{"id":"1586a9b0c2549f96","type":"text","text":"> [!info] ⏳ Notes Created Today\n> ```dataview\n> TABLE file.mtime AS Modified\n> FROM \"\" AND !\"900. Resources\"\n> WHERE file.cday = date(today)\n> SORT file.mtime DESC\n> LIMIT 30\n> ```\n","x":-3357,"y":-1586,"width":565,"height":526},
 		{"id":"f716e3ea197ffd77","type":"text","text":"> [!summary] Task Overview - Limit of 20\n> ```dataview\n> TABLE\n> regexreplace(Tasks.text, \"\\[.*$\", \"\") AS Task, \n> choice(Tasks.completed, \"✅\", \"⛔️\") AS Status, \n> Tasks.completion AS \"Completion Date\"\n> FROM \"\"\n> WHERE file.tasks\n> FLATTEN file.tasks AS Tasks\n> SORT Tasks.status\n> LIMIT 20\n> ```","x":-3357,"y":-2199,"width":565,"height":487},
 		{"id":"d165377d769b1f82","type":"text","text":"> [!warning] Task Not Done\n> ```dataview\n> TASK \n> FROM \"\"\n> WHERE !completed\n> GROUP BY file.link\n> ```\n\n","x":-3980,"y":-2199,"width":565,"height":487},
-		{"id":"04bbcf70f4dbbb74","type":"text","text":"> [!info] Table of Projects\n> ```dataview\n> TABLE aliases AS Alias\n> FROM #projects\n> WHERE file.name != this.file.name \n> SORT file.name DESC\n> ```","x":-2700,"y":-2199,"width":560,"height":487},
-		{"id":"c402846a0fee6a57","type":"text","text":"> [!NOTE] 💻 Code Overview\n> ```dataview\n> TABLE aliases AS Alias\n> FROM #code/overview  AND !\"900. Resources\"\n> SORT file.name DESC\n> ```","x":-1400,"y":-2199,"width":480,"height":487},
-		{"id":"a43785088ec4ab16","type":"text","text":"> [!NOTE] 💻 Recent Code Files\n> ```dataview\n> TABLE file.mtime AS Modified, aliases AS Alias\n> FROM #code  AND !\"900. Resources\" AND !\"700. Code\"\n> SORT file.mtime DESC\n> ```","x":-880,"y":-2199,"width":480,"height":487},
+		{"id":"04bbcf70f4dbbb74","type":"text","text":"> [!info] Table of Projects\n> ```dataview\n> TABLE aliases AS Alias\n> FROM #projects AND #IsProject\n> WHERE file.name != this.file.name \n> SORT file.name DESC\n> ```","x":-2700,"y":-2199,"width":1120,"height":487},
+		{"id":"1586a9b0c2549f96","type":"text","text":"> [!info] ⏳ Notes Created Today\n> ```dataview\n> TABLE file.mtime AS Modified\n> FROM \"\" AND !\"900. Resources\"\n> WHERE file.cday = date(today)\n> SORT file.mtime DESC\n> LIMIT 30\n> ```\n","x":-3357,"y":-1586,"width":565,"height":526},
 		{"id":"c3fc4db8be9d87ec","type":"text","text":"> [!error] 🏷️ Notes without Tags\n> ```dataview\n> TABLE file.mtime AS Modified, file.cday AS DateCreated, aliases AS Alias\n> FROM \"\" AND !\"900. Resources\"\n> WHERE file.name != this.file.name \n> WHERE !tags\n> SORT file.mtime DESC\n> LIMIT 10\n> ```","x":-2100,"y":-1589,"width":560,"height":529}
 	],
 	"edges":[]

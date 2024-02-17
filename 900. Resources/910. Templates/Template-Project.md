@@ -1,7 +1,8 @@
 ---
 date: {{date}} {{time}}
 aliases: 
-tags: 
+tags:
+- IsProject
 up: "[[_Dashboard.canvas|_Dashboard]]"
 ---
 
