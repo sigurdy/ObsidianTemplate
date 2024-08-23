@@ -18,9 +18,10 @@ up: "[[_Dashboard.canvas|_Dashboard]]"
 # 🗒️ Notes Created or Modified This Day
 > [!NOTE]
 > ```dataview
-> TABLE file.name AS Name, file.cday AS DateCreated, file.mday AS DateModified
+> TABLE file.name AS Name, file.ctime AS Created, file.mtime AS Modified
 > FROM ""
 > WHERE file.cday = date(today) OR file.mday = date(today)
+> SORT file.mtime DESC
 > ```
 
 # 🎯 Actions
