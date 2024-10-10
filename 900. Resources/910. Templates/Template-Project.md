@@ -1,7 +1,7 @@
 ---
 date: {{date}} {{time}}
 aliases: 
-tags: 
+tags: moc
 up: "[[_Dashboard.canvas|_Dashboard]]"
 ---
 
