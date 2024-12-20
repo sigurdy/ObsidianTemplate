@@ -1,10 +1,13 @@
 ---
 date: {{date}} {{time}}
 aliases: 
-meetingDate:
+meetingDate: {{date}}
 tags: 
 up: 
 ---
+
+# 🎯 Actions
+
 
 # 📤 Preparations
 
@@ -12,6 +15,4 @@ up:
 # 📝 Notes
 
 
-
-# 🎯 Actions
 
