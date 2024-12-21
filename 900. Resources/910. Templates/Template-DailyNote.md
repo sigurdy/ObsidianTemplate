@@ -26,23 +26,23 @@ up: "[[_Dashboard.canvas|_Dashboard]]"
 
 # 📆 Meetings
 
-> [!WARNING] Coming Meeting
+> [!WARNING] Coming Meetings
 > ```dataview
 > TABLE meetingDate AS MeetingDate, file.cday AS DateCreated
 > FROM "" AND !"900. Resources"
 > WHERE meetingDate AND meetingDate >= date(today)
 > SORT meetingDate DESC
-> LIMIT 5
+> LIMIT 10
 > ```
 
 
-> [!WARNING] Last Meetings
+> [!WARNING] Previous Meetings
 > ```dataview
 > TABLE meetingDate AS MeetingDate, file.cday AS DateCreated
 > FROM "" AND !"900. Resources"
-> WHERE meetingDate AND meetingDate <= date(today)
+> WHERE meetingDate AND meetingDate < date(today)
 > SORT meetingDate DESC
-> LIMIT 5
+> LIMIT 10
 > ```
 
 # 🎯 Actions
