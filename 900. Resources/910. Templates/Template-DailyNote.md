@@ -6,6 +6,10 @@ tags:
 up: "[[_Dashboard.canvas|_Dashboard]]"
 ---
 
+# 📝 Notes
+
+
+
 # ✅ Tasks
 
 > [!warning] Task Not Done
@@ -45,11 +49,6 @@ up: "[[_Dashboard.canvas|_Dashboard]]"
 > LIMIT 10
 > ```
 
-# 🎯 Actions
-
-
-
-# 📝 Notes
 
 
 
