@@ -26,6 +26,10 @@ The template uses the theme Minimal: https://github.com/kepano/obsidian-minimal
 
 *This plugin accompanies [Minimal Theme](https://github.com/kepano/obsidian-minimal), allowing you to customize the theme from the Obsidian Settings panel. This plugin is not required to use Minimal Theme, but highly recommended.*
 
+- **Omnisearch:** https://github.com/scambier/obsidian-omnisearch
+
+*Omnisearch is a search engine that "just works". It always instantly shows you the most relevant results, thanks to its smart weighting algorithm.*
+
 - **Style Settings**: https://github.com/mgmeyers/obsidian-style-settings
 
 *This plugin allows snippet, theme, and plugin CSS files to define a set of configuration options. It then allows users to see all the tweakable settings in one settings pane.*
